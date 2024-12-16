@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  
+  .animate-shake {
+    animation: shake 0.4s ease-in-out;
+  }
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .bg-animated-gradient {
+    background: linear-gradient(90deg, #4a90e2, #6a67ce, #9b59b6);
+    background-size: 300% 300%;
+    animation: gradientBackground 8s ease infinite;
+}  
