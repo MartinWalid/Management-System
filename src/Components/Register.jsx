@@ -18,7 +18,7 @@ export default function Register({ onComplete, onCancel }) {
   };
 
   return (
-    <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+    <div className="w-full max-w-md bg-animated-gradient from-blue-500 to-purple-600 p-8 rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
         Register
       </h2>

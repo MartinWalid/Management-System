@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../FireBase.js";
+import Register from "./Register.jsx";
 
-
-export default function LoginUser({ onLogin, onRegister }) {
+export default function LoginUser({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [showRegister, setShowRegister] = useState(false);
+  const [showRegister, setShowRegister] = useState(false); // Toggle state for Register view
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +18,16 @@ export default function LoginUser({ onLogin, onRegister }) {
       setError(error.message);
     }
   };
+
+  // If "showRegister" is true, display the Register component
+  if (showRegister) {
+    return (
+      <Register
+        onComplete={() => setShowRegister(false)} // Go back to Login after successful registration
+        onCancel={() => setShowRegister(false)} // Go back to Login when "Cancel" is clicked
+      />
+    );
+  }
 
   return (
     <div className="flex justify-center items-center h-screen w-screen bg-animated-gradient from-blue-500 to-purple-600">
@@ -71,12 +81,12 @@ export default function LoginUser({ onLogin, onRegister }) {
           </button>
         </form>
         <p className="mt-4 text-stone-900">Don't have an account?</p>
-        {/* <button
-          onClick={onRegister}
+        <button
+          onClick={() => setShowRegister(true)}
           className="mt-2 bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 hover:scale-110 transform transition-transform duration-300"
         >
           Register
-        </button> */}
+        </button>
       </div>
     </div>
   );
