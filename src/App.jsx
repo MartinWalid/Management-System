@@ -158,12 +158,6 @@ function App() {
         ) : (
           <div className="items-center">
             <LoginUser onLogin={handleLogin}/>
-            {/* <button
-              onClick={handleStartRegister}
-              className="felx mt-4 bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 hover:scale-110 justify-center"
-            >
-              Register
-            </button> */}
           </div>
         )}
       </main>
