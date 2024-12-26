@@ -25,7 +25,7 @@ export default function Register({ onComplete, onCancel }) {
       {error && <p className="text-red-500 mb-4">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="register-email" className="block text-sm font-medium text-gray-600 mb-1">
+          <label htmlFor="register-email" className="block text-sm font-medium text-gray-200 mb-1">
             Email
           </label>
           <input
@@ -38,7 +38,7 @@ export default function Register({ onComplete, onCancel }) {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="register-password" className="block text-sm font-medium text-gray-600 mb-1">
+          <label htmlFor="register-password" className="block text-sm font-medium text-gray-100 mb-1">
             Password
           </label>
           <input
@@ -52,14 +52,14 @@ export default function Register({ onComplete, onCancel }) {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-200"
+          className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-gray-600 transition duration-200"
         >
           Register
         </button>
         <button
           type="button"
           onClick={onCancel}
-          className="mt-4 w-full bg-gray-500 text-white py-2 rounded-md hover:bg-gray-600 transition duration-200"
+          className="mt-4 w-full text-white py-2 rounded-md hover:bg-gray-600 transition duration-200"
         >
           Cancel
         </button>
