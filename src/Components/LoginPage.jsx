@@ -81,12 +81,12 @@ export default function LoginUser({ onLogin }) {
           </button>
         </form>
         <p className="mt-4 text-stone-900">Don't have an account?</p>
-        <button
+        {/* <button
           onClick={() => setShowRegister(true)}
           className="mt-2 bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 hover:scale-110 transform transition-transform duration-300"
         >
           Register
-        </button>
+        </button> */}
       </div>
     </div>
   );
